@@ -37,6 +37,7 @@
 /* Begin PBXFileReference section */
 		A79D70012DD68828009E73CA /* NotesWatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesWatchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79D70072DD68828009E73CA /* NotesWatchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NotesWatchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79D701F2DD689EA009E73CA /* NotesWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -45,10 +46,22 @@
 			path = "NotesWatchOS Watch App";
 			sourceTree = "<group>";
 		};
+		A79D70202DD689EA009E73CA /* NotesWatchApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = NotesWatchApp;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A79D70042DD68828009E73CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79D701C2DD689EA009E73CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				A79D700B2DD68828009E73CA /* NotesWatchOS Watch App */,
+				A79D70202DD689EA009E73CA /* NotesWatchApp */,
 				A79D70022DD68828009E73CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +85,7 @@
 			children = (
 				A79D70012DD68828009E73CA /* NotesWatchOS.app */,
 				A79D70072DD68828009E73CA /* NotesWatchOS Watch App.app */,
+				A79D701F2DD689EA009E73CA /* NotesWatchApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +134,28 @@
 			productReference = A79D70072DD68828009E73CA /* NotesWatchOS Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A79D701E2DD689EA009E73CA /* NotesWatchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A79D702C2DD689EC009E73CA /* Build configuration list for PBXNativeTarget "NotesWatchApp" */;
+			buildPhases = (
+				A79D701B2DD689EA009E73CA /* Sources */,
+				A79D701C2DD689EA009E73CA /* Frameworks */,
+				A79D701D2DD689EA009E73CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A79D70202DD689EA009E73CA /* NotesWatchApp */,
+			);
+			name = NotesWatchApp;
+			packageProductDependencies = (
+			);
+			productName = NotesWatchApp;
+			productReference = A79D701F2DD689EA009E73CA /* NotesWatchApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -133,6 +170,9 @@
 						CreatedOnToolsVersion = 16.3;
 					};
 					A79D70062DD68828009E73CA = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					A79D701E2DD689EA009E73CA = {
 						CreatedOnToolsVersion = 16.3;
 					};
 				};
@@ -153,6 +193,7 @@
 			targets = (
 				A79D70002DD68828009E73CA /* NotesWatchOS */,
 				A79D70062DD68828009E73CA /* NotesWatchOS Watch App */,
+				A79D701E2DD689EA009E73CA /* NotesWatchApp */,
 			);
 		};
 /* End PBXProject section */
@@ -172,10 +213,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A79D701D2DD689EA009E73CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A79D70032DD68828009E73CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79D701B2DD689EA009E73CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -399,6 +454,67 @@
 			};
 			name = Release;
 		};
+		A79D702D2DD689EC009E73CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DP88U2RPU8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iucoding.NotesWatchApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A79D702E2DD689EC009E73CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DP88U2RPU8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iucoding.NotesWatchApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -425,6 +541,15 @@
 			buildConfigurations = (
 				A79D70192DD68829009E73CA /* Debug */,
 				A79D701A2DD68829009E73CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A79D702C2DD689EC009E73CA /* Build configuration list for PBXNativeTarget "NotesWatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79D702D2DD689EC009E73CA /* Debug */,
+				A79D702E2DD689EC009E73CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
