@@ -19,7 +19,49 @@ struct ContentView: View {
 	// MARK: - function
 	
 	private func save() {
-		dump(notes)
+		do {
+			// 1. convert the notes array to data using JSONEncoder
+			let data = try JSONEncoder().encode(notes)
+			
+			// 2. create a new url to save the file using the getDocumentDirectory
+			let url = getDocumentDirectory().appendingPathComponent("notes")
+			
+			// 3. write the data to the given url
+			try data.write(to: url)
+			
+		} catch {
+			print("Saving data has failed!")
+		}
+	}
+	
+	private func getDocumentDirectory() -> URL {
+		let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+		return path[0]
+	}
+	
+	private func load() {
+		DispatchQueue.main.async {
+			do {
+				// 1. get the notes url path
+				let url = getDocumentDirectory().appendingPathComponent("notes")
+				
+				// 2. create a new property for the data
+				let data = try Data(contentsOf: url)
+				
+				// 3. decode the data
+				notes = try JSONDecoder().decode([Note].self, from: data)
+				
+			} catch {
+				// do nothing
+			}
+		}
+	}
+	
+	private func delete(offsets: IndexSet) {
+		withAnimation {
+			notes.remove(atOffsets: offsets)
+			save()
+		}
 	}
 	
 	
@@ -57,10 +99,34 @@ struct ContentView: View {
 			
 			Spacer()
 			
-			Text("\(notes.count)")
+			if notes.count >= 1 {
+				List {
+					ForEach(notes) { note in
+						
+						HStack {
+							Capsule()
+								.frame(width: 4)
+								.foregroundColor(.accentColor)
+							Text(note.text)
+						} // HStack
+					} // ForEach
+					.onDelete(perform: delete)
+					
+				} // List
+			} else {
+				Spacer()
+				Image(systemName: "note.text")
+					.resizable()
+					.scaledToFit()
+					.foregroundColor(.gray)
+					.opacity(0.25)
+					.padding(25)
+				Spacer()
+			}
 			
 		} // VStack
 		.navigationTitle("Notes")
+		.onAppear() { load() }
 	}
 }
 
