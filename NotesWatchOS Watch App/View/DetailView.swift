@@ -15,6 +15,7 @@ struct DetailView: View {
 	let note: Note
 	let count: Int
 	let index: Int
+	@State private var areCreditsPresented: Bool = false
 	
 	
 	// MARK: - body
@@ -22,16 +23,7 @@ struct DetailView: View {
 	var body: some View {
 		VStack(alignment: .center, spacing: 3) {
 			// header
-			HStack {
-				Capsule()
-					.frame(height: 1)
-				
-				Image(systemName: "note.text")
-				
-				Capsule()
-					.frame(height: 1)
-			} // HStack
-			.foregroundColor(.accentColor)
+			HeaderView()
 			
 			// content
 			Spacer()
@@ -52,6 +44,12 @@ struct DetailView: View {
 				Spacer()
 				Image(systemName: "info.circle")
 					.imageScale(.large)
+					.onTapGesture {
+						areCreditsPresented.toggle()
+					}
+					.sheet(isPresented: $areCreditsPresented) {
+						CreditsView()
+					}
 				
 			} // HStack
 			.foregroundColor(.accentColor)

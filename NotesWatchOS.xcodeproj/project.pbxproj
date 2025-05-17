@@ -40,6 +40,23 @@
 		A79D701F2DD689EA009E73CA /* NotesWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A7691D012DD8E44A003CB9B1 /* Exceptions for "NotesWatchApp" folder in "NotesWatchOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+			);
+			target = A79D70002DD68828009E73CA /* NotesWatchOS */;
+		};
+		A7691D022DD8E44A003CB9B1 /* Exceptions for "NotesWatchApp" folder in "NotesWatchOS Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+			);
+			target = A79D70062DD68828009E73CA /* NotesWatchOS Watch App */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A79D700B2DD68828009E73CA /* NotesWatchOS Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -48,6 +65,10 @@
 		};
 		A79D70202DD689EA009E73CA /* NotesWatchApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A7691D012DD8E44A003CB9B1 /* Exceptions for "NotesWatchApp" folder in "NotesWatchOS" target */,
+				A7691D022DD8E44A003CB9B1 /* Exceptions for "NotesWatchApp" folder in "NotesWatchOS Watch App" target */,
+			);
 			path = NotesWatchApp;
 			sourceTree = "<group>";
 		};
